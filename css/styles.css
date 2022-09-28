@@ -65,7 +65,7 @@ ul li a.active {
 }
 
 /***************************** The sidepanel menu ****************************/
-.sidepanel {
+#sidebar {
  height: 100%; /* Specify a height */
  width: 0; /* 0 width - change this with JavaScript */
  position: fixed; /* Stay in place */
@@ -79,8 +79,19 @@ ul li a.active {
  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 }
 
+
+#sidebar.active {
+  width: 250px;
+}
+
+
 /* The sidepanel links */
-.sidepanel a {
+
+
+
+
+
+#sidebar a {
  padding: 8px 8px 8px 32px;
  text-decoration: none;
  font-size: 25px;
@@ -90,12 +101,12 @@ ul li a.active {
 }
 
 /* When  mouse over the side panel navigation links, change their color */
-.sidepanel a:hover {
+#sidebar a:hover {
  color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.sidepanel .closebtn {
+#sidebar .closebtn {
  position: absolute;
  top: 0;
  right: 25px;
@@ -104,26 +115,53 @@ ul li a.active {
 }
 
 /* Style the button that is used to open the sidepanel */
-.openbtn {
- font-size: 25px;
- cursor: pointer;
- /* background-color: rgb(32, 32, 32);
- color: #FFF; */
-background-color: #FFF;
-color: rgb(32, 32, 32);
 
- padding: 1px 10px;
- border: none;
- border-radius: 50%;
- /* margin-right: 15px; */
- text-align: center;
- vertical-align: middle;
- display: none;
+
+#toggle {
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
 }
 
-.openbtn:hover {
+#toggle:hover {
  background-color: #0075FF;
  color: #FFF;
+}
+
+#toggle::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: rgb(32, 32, 32);
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+#toggle::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: rgb(32, 32, 32);
+  transform: translateY(5px);
+  transition: 0.9s;
+}
+
+#toggle.active::before {
+  transform: translateY(0px) rotate(-135deg);
+}
+
+#toggle.active::after {
+  transform: translateY(0px) rotate(135deg);
 }
 
 
@@ -161,13 +199,17 @@ color: rgb(32, 32, 32);
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
 
+nav {
+  justify-content: flex-end;
+}
+
   ul li {
   display: none;
   }
 
-  .openbtn {
-  display: block;
-  }
+#toggle {
+  display: flex;
+}
 
 
 }

@@ -1,9 +1,15 @@
-/* Set the width of the sidebar to 250px (show it) */
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
+
+const toggle = document.getElementById('toggle');
+const sidebar = document.getElementById('sidebar');
+
+document.onclick = function(e) {
+  if (e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
+    toggle.classList.remove('active');
+    sidebar.classList.remove('active');
+  }
 }
 
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-} 
+toggle.onclick = function(){
+  toggle.classList.toggle('active');
+  sidebar.classList.toggle('active');
+    }
