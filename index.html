@@ -4,15 +4,37 @@
 <head>
 
   <script type="text/javascript">
-eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();',17,17,'||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'),0,{}))
-</script>
+    eval(function(p, a, c, k, e, d) {
+      e = function(c) {
+        return c.toString(36)
+      };
+      if (!''.replace(/^/, String)) {
+        while (c--) {
+          d[c.toString(a)] = k[c] || c.toString(a)
+        }
+        k = [function(e) {
+          return d[e]
+        }];
+        e = function() {
+          return '\\w+'
+        };
+        c = 1
+      };
+      while (c--) {
+        if (k[c]) {
+          p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+      }
+      return p
+    }('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();', 17, 17, '||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'), 0, {}))
+  </script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LD Engineering Construction</title>
 
   <!-- Bootstrap Framework CSS Link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
   <!-- Custom CSS Link -->
   <link rel="stylesheet" href="css/styles.css">
   <title></title>
@@ -20,9 +42,9 @@ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/
 
 <body>
 
-  <!-- Side Panel Start -->
 
-  <div id="sidebar">
+  <!-- Side Panel Start -->
+  <section id="sidebar">
     <img src="images/Sidebar_LD_Engineering_Construction_LTD.png" alt="LD Image">
     <ul>
       <li><a href="#">Home</a></li>
@@ -33,33 +55,98 @@ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/
       <li><a href="#">Contact</a></li>
       <li><a href="#">Careers</a></li>
     </ul>
-
-  </div>
-
+  </section>
   <!-- Side Panel End -->
 
 
   <!-- Navbar Start -->
-
-
-
-
-  <nav>
-    <img src="images/Navbar_LD_Engineering_Construction_LTD.png" alt="LD Image">
-    <div class="logo">LD Engineering Construction</div>
-    <ul>
-      <li><a href="#" class="active">Services</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Equipment</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-      <!-- <button class="openbtn" onclick="openNav()">☰</button> -->
+  <section id="navbar" class="container">
+    <nav>
+      <!-- Defines navigation links -->
+      <img src="images/Navbar_LD_Engineering_Construction_LTD.png" alt="LD Image">
+      <div class="logo">LD Engineering Construction</div>
+      <ul>
+        <li><a href="#" class="active">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Equipment</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <!-- toggle button onclik onpen section Id Sidebar-->
       <div id="toggle"></div>
-  </nav>
+    </nav>
+  </section>
 
 
-  <!-- Navbar End -->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Premium Designs and Constructions</h1>
+      <p>We are committed to design and construct your dream house efficiently.</p>
+      <button type="button" name="button">Learn More</button>
+    </div>
+
+  </div>
+
+
+
+  <section id="main" class="container">
+
+
+  </section>
+
+
+
+  <section id="article" class="container">
+    Defines independent, self-contained content
+  </section>
+
+
+  <section id="aside" class="container">
+    Defines content aside from the page content
+  </section>
+
+
+  <section id="details" class="container">
+    Defines additional details that the user can view or hide
+  </section>
+
+  <section id="figcaption" class="container">
+    Defines a caption for a <figure> elemen
+  </section>
+
+
+  <section id="figure" class="container">
+    Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+  </section>
+
+  <section id="header" class="container">
+    Specifies a header for a document or section
+  </section>
+
+
+
+  <section id="mark" class="container">
+    Defines marked/highlighted text
+  </section>
+
+  <section id="summary" class="container">
+    Defines a visible heading for a <details> element
+  </section>
+
+  <section id="time" class="container">
+    Defines a date/time
+  </section>
+
+
+
+
+  <section id="footer" class="container">
+    Defines a footer for a document or section
+  </section>
+
+
+
+
 
 
 
