@@ -21,7 +21,6 @@ nav {
 
 nav img, #sidebar img {
   height: 50px;
-  border-radius: 20%;
   padding: 0 10px;
   filter: invert(1) brightness(100);
 }
