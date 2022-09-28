@@ -18,7 +18,16 @@ nav {
   justify-content: space-between;
   padding: 15px 5%;
   align-items: center;
-  background: green;
+  background: rgb(32, 32, 32);
+}
+
+nav img {
+
+  height: 100px;
+  border-radius: 20%;
+  padding: 0 10px;
+  filter:  invert(1) brightness(100);
+
 }
 
 .logo {
@@ -41,7 +50,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  color: black;
+  color: #FFF;
   padding: 8px 30px;
   border-radius: 7px;
   transition: all .3s ease;
@@ -61,9 +70,10 @@ ul li a.active {
  width: 0; /* 0 width - change this with JavaScript */
  position: fixed; /* Stay in place */
  z-index: 1; /* Stay on top */
- top: 0;
+ top: ;
  left: 0;
- background-color: #111; /* Black*/
+ background-color:rgba(32, 32, 32, .9); /* Black*/
+ backdrop-filter: blur(5px);
  overflow-x: hidden; /* Disable  scroll */
  padding: 60px 0 60px 0; /* Place content 60px from the top */
  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
@@ -97,41 +107,40 @@ ul li a.active {
 .openbtn {
  font-size: 25px;
  cursor: pointer;
- background-color: #111;
- color: white;
+ /* background-color: rgb(32, 32, 32);
+ color: #FFF; */
+background-color: #FFF;
+color: rgb(32, 32, 32);
+
  padding: 1px 10px;
  border: none;
  border-radius: 50%;
  /* margin-right: 15px; */
  text-align: center;
  vertical-align: middle;
+ display: none;
 }
 
 .openbtn:hover {
- background-color: #444;
+ background-color: #0075FF;
+ color: #FFF;
 }
 
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 
 
 
-  nav ul {
-  display: none;
-}
 
-
-}
+} */
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
 
-  .openbtn {
- display: none;
-}
+
 
 
 }
@@ -140,12 +149,34 @@ ul li a.active {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
+@media only screen and (max-width: 768px) {
+
+
+
+}
+
 
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
+@media only screen and (max-width: 992px) {
+
+  ul li {
+  display: none;
+  }
+
+  .openbtn {
+  display: block;
+  }
+
+
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {
+
+
+
+
+
+}
