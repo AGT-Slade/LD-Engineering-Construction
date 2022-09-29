@@ -223,7 +223,7 @@ nav ul li a.active {
   bottom: 0;
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8)), url("../images/footer_image.jpg");
   color: #fff;
-  padding: 100px 0 30px;
+  padding: 40px 0 100px 30px;
   border-top-left-radius: 125px;
   line-height: 20px;
   background-position: center;
@@ -241,8 +241,13 @@ nav ul li a.active {
   }
 
   .col {
-    flex-basis: 25%;
+    flex-basis: 250px;
     padding: 10px;
+    margin-top: 60px;
+  }
+
+  .keep-together {
+    white-space: nowrap;
   }
 
   .footer-logo {
@@ -253,7 +258,7 @@ nav ul li a.active {
 
   #footer .col h3 {
     width: fit-content;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     position:relative;
   }
 
