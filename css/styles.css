@@ -182,7 +182,7 @@ nav ul li a.active {
 }
 
 #toggle:hover {
-  background-color: #0075FF;
+/*   background-color: #0075FF; */
   color: #FFF;
 }
 
@@ -193,7 +193,7 @@ nav ul li a.active {
   height: 2px;
   background: rgb(32, 32, 32);
   transform: translateY(-5px);
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 #toggle::after {
@@ -203,7 +203,7 @@ nav ul li a.active {
   height: 2px;
   background: rgb(32, 32, 32);
   transform: translateY(5px);
-  transition: 0.9s;
+  transition: 0.4s;
 }
 
 #toggle.active::before {
