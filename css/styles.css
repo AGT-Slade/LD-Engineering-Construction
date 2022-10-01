@@ -216,9 +216,64 @@ nav ul li a.active {
 }
 
 
-/******************* css testimonials Section *************************/
+/* css compnay section */
 
-#testimonials {
+
+#company {
+  background-image: url("../images/testimonials_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  padding: 10px 0;
+
+
+}
+
+#company .heading {
+  margin: 20px;
+  padding: 40px 0 20px;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid #111;
+
+}
+
+
+#company .container {
+  display: flex;
+  margin: 10px 10%;
+  gap: 10px;
+
+
+
+}
+
+#company .container .content {
+
+  width: 100%;
+}
+
+
+#company .container .image {
+width: 100%;
+
+}
+
+@media only screen and (max-width: 768px) {
+  #company .container {
+    flex-wrap: wrap;
+  justify-content: space-around;
+  }
+}
+
+
+
+
+
+/******************* css team Section *************************/
+
+#team {
   background-image: url("../images/testimonials_image.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -227,8 +282,7 @@ nav ul li a.active {
 
 }
 
-#testimonials .heading {
-  margin: auto;
+#team .heading {
   padding: 40px 0 20px;
   margin: 0 20px;
   text-align: center;
@@ -237,14 +291,14 @@ nav ul li a.active {
 
 }
 
-#testimonials .card-grid {
+#team .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 20px;
   padding-top: 10px;
 }
 
-#testimonials .card-grid .card {
+#team .card-grid .card {
   position: relative;
   width: 350px;
   margin: 60px auto 30px;
@@ -254,10 +308,9 @@ nav ul li a.active {
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  36	255	11
 }
 
-#testimonials .card-grid .card img {
+#team .card-grid .card img {
   position: absolute;
   top: -50px;
   left: 0;
@@ -272,19 +325,19 @@ nav ul li a.active {
 }
 
 
-#testimonials .card-grid .card .content h2 {
+#team .card-grid .card .content h2 {
   font-size: 1.1rem;
   color: #fff;
 
 }
 
-#testimonials .card-grid .card .content h2 span {
+#team .card-grid .card .content h2 span {
   color: #03a9f4;
   font-size: 1.14rem;
 
 }
 
-#testimonials .card-grid .card .content p {
+#team .card-grid .card .content p {
   margin: 20px auto 5px;
   font-size: 1.1rem;
   line-height: 1.5rem;
