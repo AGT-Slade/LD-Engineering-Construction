@@ -5,23 +5,29 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
 body {
-  height: 100vh;
   background: powderblue;
   font-family: sans-serif;
   font-size: 1em;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-section nav {
+.flex-child-container {
   display: flex;
+  flex-basis: 100%;
+  flex-flow: row nowrap;
+}
+
+nav {
   justify-content: space-between;
+  overflow: hidden;
   padding: 15px 5%;
   align-items: center;
   background: rgb(32, 32, 32);
 }
 
-section nav img, #sidebar img {
+nav img, #sidebar img {
   height: 50px;
   padding: 0 10px;
   filter: invert(1) brightness(100);
@@ -59,47 +65,20 @@ nav ul li a.active {
   background: #0075FF;
 }
 
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)), url("../images/hero_image.jpg");
-  height: 70%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
 /***************************** The sidepanel menu ****************************/
 #sidebar {
   height: 100%;
-  /* Specify a height */
   width: 0;
-  /* 0 width - change this with JavaScript */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Stay on top */
   top: ;
   left: 0;
   background-color: rgba(32, 32, 32, .9);
-  /* Black*/
   backdrop-filter: blur(5px);
   overflow-x: hidden;
   /* Disable  scroll */
   padding: 60px 0;
-  /* Place content 60px from the top */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidepanel */
 }
 
 #sidebar.active {
@@ -111,7 +90,7 @@ nav ul li a.active {
   margin-bottom: 30px;
 }
 
-/* The sidepanel links */
+/*************************** The sidepanel Menu links ***********************/
 #sidebar ul {
   position: relative;
   margin-left: 20px;
@@ -127,16 +106,13 @@ nav ul li a.active {
   border-left: 2px solid #24ff0b;
   transition: 0.5s;
   cursor: pointer;
-
   font-size: 25px;
 }
-
 
 #sidebar ul li:hover {
   /* color: #f1f1f1; */
   left: 10px;
 }
-
 
 #sidebar ul li::before {
   content: '';
@@ -166,10 +142,8 @@ nav ul li a.active {
   color: #111;
 }
 
-/* When  mouse over the side panel navigation links, change their color */
+/********** Style the button that is used to open the sidepanel *******/
 
-/* Position and style the close button (top right corner) */
-/* Style the button that is used to open the sidepanel */
 #toggle {
   width: 50px;
   height: 50px;
@@ -215,55 +189,73 @@ nav ul li a.active {
   transform: translateY(0px) rotate(135deg);
 }
 
+/******************* css Hero Section *************************/
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)), url("../images/hero_image.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 
 /* css compnay section */
 
-
 #company {
+  flex-wrap: wrap;
   background-image: url("../images/testimonials_image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: auto;
   padding: 10px 0;
-
-
 }
 
-#company .heading {
-  margin: 20px;
+#company h1 {
+  flex-basis: 100%;
   padding: 40px 0 20px;
   text-align: center;
   font-size: 2rem;
   border-bottom: 2px solid #111;
-
 }
 
-
-#company .container {
-  display: flex;
-  margin: 10px 10%;
-  gap: 10px;
-
-
-
+#company .content {
+display: flex;
+margin: auto 5%;
+flex-wrap: nowrap;
+justify-content: space-around;
+padding: 20px;
+gap: 20px;
 }
 
-#company .container .content {
-
-  width: 100%;
+#company .text-content {
 }
 
+#company .image {
+  height: 400px;
+  width: 400px;
+}
 
-#company .container .image {
-width: 100%;
-
+#company img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 768px) {
-  #company .container {
-    flex-wrap: wrap;
-  justify-content: space-around;
+  #company .content {
+  flex-wrap: wrap;
+  padding: none;
   }
 }
 
@@ -272,26 +264,24 @@ width: 100%;
 
 
 /******************* css team Section *************************/
-
 #team {
   background-image: url("../images/testimonials_image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: auto;
-
+  flex-wrap: wrap;
 }
 
 #team .heading {
+  flex-basis: 100%;
   padding: 40px 0 20px;
-  margin: 0 20px;
   text-align: center;
   font-size: 2rem;
   border-bottom: 2px solid #111;
-
 }
 
 #team .card-grid {
+  flex-basis: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 20px;
@@ -318,23 +308,19 @@ width: 100%;
   width: 100px;
   height: 100px;
   object-fit: cover;
-  margin: 0 auto;
+  margin: auto;
   border-radius: 50%;
   border: 2px solid rgba(253, 189, 10, 1);
-  253,189,1
 }
-
 
 #team .card-grid .card .content h2 {
   font-size: 1.1rem;
   color: #fff;
-
 }
 
 #team .card-grid .card .content h2 span {
   color: #03a9f4;
   font-size: 1.14rem;
-
 }
 
 #team .card-grid .card .content p {
@@ -347,77 +333,70 @@ width: 100%;
 
 /******************* css footer Section *************************/
 
-#footer {
-  width: 100%;
-
-  bottom: 0;
+footer {
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8)), url("../images/footer_image.jpg");
   color: #fff;
   padding: 40px 0 100px 30px;
-
   line-height: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  }
+}
 
-  .row{
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-Start;
-    justify-content: space-between;
-  }
+footer .row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-Start;
+  justify-content: space-between;
+}
 
-  .col {
-    flex-basis: 250px;
-    padding: 10px;
-    margin-top: 60px;
-  }
+footer .col {
+  flex-basis: 250px;
+  padding: 10px;
+  margin-top: 60px;
+}
 
-  .keep-together {
-    white-space: nowrap;
-  }
+footer .keep-together {
+  white-space: nowrap;
+}
 
-  .footer-logo {
-    width: 180px;
-    margin-bottom: 30px;
-    filter: invert(1) brightness(100) drop-shadow(5px 5px 5px #111);
-  }
+footer .footer-logo {
+  width: 180px;
+  margin-bottom: 30px;
+  filter: invert(1) brightness(100) drop-shadow(5px 5px 5px #111);
+}
 
-  #footer .col h3 {
-    width: fit-content;
-    margin-bottom: 30px;
-    position:relative;
-  }
+footer .col h3 {
+  width: fit-content;
+  margin-bottom: 30px;
+  position: relative;
+}
 
+footer .row .col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
 
+footer .row .col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 
-  #footer .row .col ul li {
-    list-style: none;
-    margin-bottom: 12px;
-
-  }
-
-  #footer .row .col ul li a{
-    text-decoration: none;
-    color: #fff;
-
-  }
-
-
-  span i {
-  /* color: red; */
-  }
+footer .row .col span i {
+  color: red;
+}
 
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {}
 
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {}
+
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
@@ -433,6 +412,7 @@ width: 100%;
     display: flex;
   }
 }
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
