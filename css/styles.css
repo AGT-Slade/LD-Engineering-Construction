@@ -214,11 +214,12 @@ nav ul li a.active {
 
 #company {
   flex-wrap: wrap;
-  background-image: url("../images/testimonials_image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url("../images/company_cover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px 0;
+  color: white;
 }
 
 #company h1 {
@@ -226,12 +227,15 @@ nav ul li a.active {
   padding: 40px 0 20px;
   text-align: center;
   font-size: 2rem;
-  border-bottom: 2px solid #111;
+  margin: 0 20px;
+  border-bottom: 2px solid white;
 }
 
 #company .content {
+background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
 display: flex;
-margin: auto 5%;
+margin: 5%;
+border-radius: 1%;
 flex-wrap: nowrap;
 justify-content: space-around;
 padding: 20px;
@@ -239,17 +243,20 @@ gap: 20px;
 }
 
 #company .text-content {
+  line-height: 2;
 }
 
 #company .image {
-  height: 400px;
   width: 400px;
+  border-radius: 25%;
+  flex-shrink: 0;
 }
 
 #company img {
   max-height: 100%;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 768px) {
@@ -277,6 +284,7 @@ gap: 20px;
   padding: 40px 0 20px;
   text-align: center;
   font-size: 2rem;
+  margin: 0 20px;
   border-bottom: 2px solid #111;
 }
 
