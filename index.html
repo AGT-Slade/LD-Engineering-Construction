@@ -34,6 +34,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responsive Display</title>
+
+    <!-- Bootstrap Framework CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -75,15 +79,57 @@
   <!-- Navbar Section End -->
 
 
-  <!-- Hero Section Start -->
-  <div class="hero flex-child-container">
-    <div class="hero-text">
-      <h1>Premium Designs and Constructions</h1>
-      <p>We are committed to design and construct your dream house efficiently.</p>
-      <button type="button" name="button">Learn More</button>
+  <div id="carouselExampleIndicators" class="carousel slide flex-child-container" data-bs-ride="true" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="hero flex-child-container image-1">
+          <div class="hero-text">
+            <h1>Premium Designs and Constructions</h1>
+            <p>We are committed to design and construct your dream house efficiently.</p>
+            <button type="button" name="button">Learn More</button>
+          </div>
+        </div>
+        <!-- <img src="images/company_building.jpg" class="d-block w-100" alt="..."> -->
+      </div>
+      <div class="carousel-item">
+        <div class="hero flex-child-container image-2">
+          <div class="hero-text">
+            <h1>Premium Designs and Constructions</h1>
+            <p>We are committed to design and construct your dream house efficiently.</p>
+            <button type="button" name="button">Learn More</button>
+          </div>
+        </div>
+        <!-- <img src="images/company_building.jpg" class="d-block w-100" alt="..."> -->
+      </div>
+      <div class="carousel-item">
+        <!-- Hero Section Start -->
+        <div class="hero flex-child-container image-3">
+          <div class="hero-text">
+            <h1>Premium Designs and Constructions</h1>
+            <p>We are committed to design and construct your dream house efficiently.</p>
+            <button type="button" name="button">Learn More</button>
+          </div>
+        </div>
+        <!-- Hero Section End -->
+        <!-- <img src="images/company_building.jpg" class="d-block w-100" alt="..."> -->
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <!-- Hero Section End -->
+
+
 
 
   <!-- Company Section Start -->
