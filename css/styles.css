@@ -341,6 +341,13 @@ gap: 20px;
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: bottom 2s ease 0s;
+  bottom: 0
+}
+
+#team .card-grid .card:hover {
+  bottom: 20px;
+
 }
 
 #team .card-grid .card img {
